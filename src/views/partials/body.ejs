@@ -1,2 +1,21 @@
 <body>
+  <header class="w-full bg-red-400 px-20 py-4">
+    <ul class="flex gap-4 ">
+      <li>
+        <a class="<%= path === 'home' ? 'bg-red-200':'hover:bg-red-200' %> py-1.5 px-3 font-semibold rounded" href="/">Home</a>
+      </li>
+      <li>
+        <a class="<%= path === 'house-list' ? 'bg-red-200':'hover:bg-red-200' %> py-1.5 px-3 font-semibold rounded" href="/house-list">House List</a>
+      </li>
+      <li>
+        <a class="<%= path === 'fevourite' ? 'bg-red-200':'hover:bg-red-200' %> py-1.5 px-3 font-semibold rounded" href="/fevourite">Fevourite</a>
+      </li>
+      <li>
+        <a class="<%= path === 'host-homes' ? 'bg-red-200':'hover:bg-red-200' %> py-1.5 px-3 font-semibold rounded" href="/host/home/list">Host Homes</a>
+      </li>
+      <li>
+        <a class="<%= path === 'add-home' ? 'bg-red-200':'hover:bg-red-200' %> py-1.5 px-3 font-semibold rounded" href="/host/home/add">Add Home</a>
+      </li>
+    </ul>
+  </header>
   

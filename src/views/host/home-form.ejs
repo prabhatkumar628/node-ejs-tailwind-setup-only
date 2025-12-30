@@ -1,0 +1,89 @@
+<%- include('../partials/head') %>
+<title>Add new home</title>
+</head>
+
+<%- include('../partials/body') %>
+
+<div class="max-w-3xl mx-auto mt-10 bg-white border border-gray-200 shadow-lg rounded-xl p-8">
+
+  <h1 class="text-3xl font-bold text-center text-red-500 mb-6">
+    <%= edit ? "Edit" : "Add New" %> Home
+  </h1>
+
+  <form action="<%= edit ? '/host/home/edit-success' : '/host/home/add-success' %>" method="post" class="space-y-5">
+
+    <input type="hidden" name="id" value="<%= edit ? home.id : null %>">
+    <!-- Home Name -->
+    <div class="flex flex-col">
+      <label for="homeName" class="mb-1 text-sm font-medium text-gray-700">
+        Enter your Home name
+      </label>
+      <input
+        id="homeName"
+        type="text"
+        name="houseName"
+        value="<%= edit ? home.houseName : null %>"
+        placeholder="e.g. Green Villa"
+        class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-red-400"
+      />
+    </div>
+
+    <!-- Location -->
+    <div class="flex flex-col">
+      <label for="location" class="mb-1 text-sm font-medium text-gray-700">
+        Home location
+      </label>
+      <input
+        id="location"
+        type="text"
+        name="location"
+        value="<%= edit ? home.location : null %>"
+        placeholder="e.g. Mumbai, Andheri"
+        class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-red-400"
+      />
+    </div>
+
+    <!-- Price -->
+    <div class="flex flex-col">
+      <label for="price" class="mb-1 text-sm font-medium text-gray-700">
+        Price
+      </label>
+      <input
+        id="price"
+        type="text"
+        name="price"
+        value="<%= edit ? home.price : null %>"
+        placeholder="₹ 5,000 / night"
+        class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-red-400"
+      />
+    </div>
+
+    <!-- Picture -->
+    <div class="flex flex-col">
+      <label for="image" class="mb-1 text-sm font-medium text-gray-700">
+        Picture URL
+      </label>
+      <input
+        id="image"
+        type="text"
+        name="image"
+        value="<%= edit ? home.image : null %>"
+        placeholder="https://example.com/image.jpg"
+        class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-red-400"
+      />
+    </div>
+
+    <!-- Submit Button -->
+    <div class="pt-4">
+      <button
+        type="submit"
+        class="w-full bg-red-500 text-white py-2 rounded-lg font-semibold hover:bg-red-600 transition"
+      >
+        <%= edit ? "Update Home" : "Add Home" %>
+      </button>
+    </div>
+
+  </form>
+</div>
+
+<%- include('../partials/footer') %>

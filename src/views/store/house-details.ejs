@@ -1,0 +1,108 @@
+<%- include('../partials/head') %>
+<title>House Details</title>
+</head>
+
+<%- include('../partials/body') %>
+
+<div class="max-w-6xl mx-auto px-6 py-10">
+
+  <!-- Back link -->
+  <a
+    href="/"
+    class="inline-block mb-6 text-red-500 font-semibold hover:underline"
+  >
+    ← Back to House List
+  </a>
+
+  <!-- Main Card -->
+  <div class="bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden">
+
+    <!-- Image -->
+    <img
+      src="https://images.unsplash.com/photo-1568605114967-8130f3a36994"
+      alt="House Image"
+      class="w-full h-[420px] object-cover"
+    />
+
+    <!-- Content -->
+    <div class="p-8">
+
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
+        <div>
+          <h1 class="text-3xl font-bold text-gray-800">
+            Green Villa
+          </h1>
+          <p class="text-gray-500 mt-1">
+            Mumbai, Andheri
+          </p>
+        </div>
+
+        <div class="text-2xl font-bold text-red-500 mt-4 md:mt-0">
+          ₹5,000 / night
+        </div>
+      </div>
+
+      <!-- Description -->
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Green Villa is a premium house located in Andheri, Mumbai.
+        It offers a peaceful stay with modern facilities and a beautiful ambiance.
+        Ideal for families, couples, and business travelers.
+      </p>
+
+      <!-- Features -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+        <div class="bg-gray-100 rounded-lg p-3 text-center text-sm font-medium">
+          🛏 3 Bedrooms
+        </div>
+        <div class="bg-gray-100 rounded-lg p-3 text-center text-sm font-medium">
+          🛁 2 Bathrooms
+        </div>
+        <div class="bg-gray-100 rounded-lg p-3 text-center text-sm font-medium">
+          📶 Free Wi-Fi
+        </div>
+        <div class="bg-gray-100 rounded-lg p-3 text-center text-sm font-medium">
+          🚗 Parking
+        </div>
+      </div>
+
+      <!-- Extra Info -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-2">House Rules</h3>
+          <ul class="text-gray-600 text-sm space-y-1">
+            <li>• No smoking inside</li>
+            <li>• Pets not allowed</li>
+            <li>• Check-in after 12 PM</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-800 mb-2">Owner Details</h3>
+          <p class="text-gray-600 text-sm">
+            Name: Rajesh Sharma <br />
+            Contact: +91 98765 43210
+          </p>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <button
+          class="flex-1 bg-red-500 text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition"
+        >
+          Book Now
+        </button>
+
+        <button
+          class="flex-1 border border-red-500 text-red-500 py-3 rounded-lg font-semibold hover:bg-red-50 transition"
+        >
+          Contact Owner
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<%- include('../partials/footer') %>
